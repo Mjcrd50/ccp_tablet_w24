@@ -1,0 +1,204 @@
+body {
+    width: 80%;
+    margin: auto;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif
+}
+
+#skip a {
+    position: absolute;
+    left: -10000px;
+    overflow: hidden;
+    border: 1px solid black;
+    padding: 5px;
+    background-color: aliceblue;
+}
+
+#skip a:focus {
+    left: 20px;
+    top: 20px;
+}
+
+@media (prefers-reduced-motion) {
+    .header-img-travel .header-gif {
+        display: none;
+    }
+
+    .gallery .header-gif {
+        display: none;
+    }
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+nav ul li {
+    padding: 25px;
+    text-align: center;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.active {
+    color: black;
+    padding: 25px;
+    border-bottom: 3px solid black;
+    font-weight: bold;
+}
+
+main ul {
+    list-style-type: disc;
+    margin-left: 30px;
+    list-style-position: outside;
+}
+
+main ol {
+    list-style-type: number;
+    margin-left: 30px;
+    list-style-position: outside;
+    line-height: 1.25;
+}
+
+main li {
+    margin-bottom: 5px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+main a {
+    text-decoration: underline;
+    color: rgb(56, 69, 206);
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 40px;
+    text-align: left;
+    margin-top: 44px;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 23px;
+    margin-top: 75px;
+    margin-bottom: 40px;
+    padding: 5px 0px;
+    border-bottom: solid 1px black;
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 65px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+p {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 150%;
+    margin-top: 10px;
+}
+
+
+img,
+figure img {
+    aspect-ratio: 1/1;
+    width: 100%;
+    object-fit: cover;
+    vertical-align: text-top;
+    border-radius: 100%;
+    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.2);
+}
+
+.header-img{
+    aspect-ratio: 5/3;
+    width: 100%;
+    object-fit: cover;
+    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.16);
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+figcaption {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.header-img-travel {
+    display: grid;
+    column-gap: 15px;
+    grid-template-columns: 1fr 1fr;
+}
+
+img:hover {
+    transform: scale(1.05);
+    transition: all .25s ease-in-out;
+}
+
+.video {
+    height: 100%;
+    width: 100%;
+}
+
+video {
+    aspect-ratio: 1/1;
+    width: 100%;
+    object-fit: contain;
+    border: 1px solid black;
+    background-color: black;
+}
+
+video:hover {
+    transform: scale(1.1);
+    transition: all .25s ease-in-out;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    margin-bottom: 30px;
+    column-gap: 30px;
+    row-gap: 80px;
+}
+
+
+@media (min-width: 768px) {
+    .gallery {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .header-img{
+        aspect-ratio: 7/3;
+    }
+
+    .recipe {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+    }
+}
+
+@media (min-width: 1080px) {
+    body {
+        max-width: 900px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+footer {
+    margin-top: 40px;
+    border-top: solid 2px black;
+}
